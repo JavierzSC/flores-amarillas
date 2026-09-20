@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+    font-family: Arial, sans-serif;
+}
+
+#mensaje {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffd900;
+    text-align: center;
+    font-size: 35px;
+    text-shadow: 0 0 20px yellow;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#mensaje span {
+    font-size: 22px;
+}
