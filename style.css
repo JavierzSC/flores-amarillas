@@ -1,23 +1,45 @@
 body {
     margin: 0;
     overflow: hidden;
-    background: black;
+    background: radial-gradient(circle, #151000, #000000 70%);
     font-family: Arial, sans-serif;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+    radial-gradient(circle at top left, rgba(255,220,0,.25), transparent 30%),
+    radial-gradient(circle at top right, rgba(255,220,0,.25), transparent 30%),
+    radial-gradient(circle at bottom left, rgba(255,220,0,.2), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(255,220,0,.2), transparent 30%);
 }
 
 #mensaje {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffd900;
+    transform: translate(-50%,-50%);
+    color: #ffe600;
+    font-size: 38px;
     text-align: center;
-    font-size: 35px;
-    text-shadow: 0 0 20px yellow;
+    text-shadow:
+    0 0 10px yellow,
+    0 0 30px orange;
     cursor: pointer;
-    z-index: 10;
+    animation: brillo 2s infinite alternate;
 }
 
 #mensaje span {
     font-size: 22px;
+}
+
+@keyframes brillo {
+    from {
+        text-shadow: 0 0 10px yellow;
+    }
+    to {
+        text-shadow: 0 0 35px orange;
+    }
 }
